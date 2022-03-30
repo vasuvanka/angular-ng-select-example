@@ -23,6 +23,7 @@ export class AppComponent implements OnInit {
   customSearchFn(term: string, item: any) {
     term = term.toLowerCase();
     return (
+      item.id.toString().toLowerCase().indexOf(term) > -1 ||
       item.id.toString() == term ||
       item.name.toLowerCase().indexOf(term) > -1 ||
       item.name.toLowerCase() === term
