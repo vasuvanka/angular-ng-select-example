@@ -1,0 +1,14 @@
+<hello name="{{ name }}"></hello>
+
+<!--Using items input-->
+<ng-select
+  [items]="cars"
+  bindLabel="name"
+  [loading]="loading"
+  [searchFn]="customSearchFn"
+>
+  <ng-template ng-option-tmp let-item="item">
+    {{ item.name }} <br />
+    <small>{{ item.id }}</small>
+  </ng-template>
+</ng-select>
